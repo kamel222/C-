@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+void num(int arr[],int s)
+{
+	cout << "enter array elements" << endl;
+	for (size_t i = 0; i < s; i++)
+	{
+		cin >> arr[i];
+	}
+
+}
+void num2(int arr[], int s)
+{
+	cout << " \n the elements you entered is :  \n " << endl;
+	for (size_t i = 0; i < s; i++)
+	{
+		cout << arr[i] << endl;
+	}
+
+}
+int prop(int arr[], int s)
+{
+	int sum;
+	int i;
+	for (i = 0; i < s; i++)
+	{
+		if (arr[i]+1 <= s)
+		{
+			cout << " (element " << i + 1<< ")" << " + (element " << i + 2 <<")= ";
+			cout << arr[i] + arr[i + 1] << endl;
+
+		}
+	}
+	return 0;
+}
+int main()
+{
+	int a[6];
+	int s;
+	int x;
+	cout << "enter array size" << endl;
+	cin >> x;
+	s == x;
+
+	num(a , x);
+	num2(a, x);
+	cout << "   " << endl;
+	prop(a, x);
+	return 0;
+}

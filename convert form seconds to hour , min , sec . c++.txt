@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int sec_to_hms(int sec)
+{
+	float hours;
+	float min;
+	hours = sec / 3600;
+	min = (sec / 60) - ((int)hours * 60);
+	sec = sec  - ((min * 60) + (hours * 3600));
+	cout << "hours :" << (int)hours << endl;
+	cout << "minutes :" << (int)min << endl;
+	cout << "secondes :" << (int)sec << endl;
+	return 0;
+}
+int main()
+{
+	char x;
+	do
+	{
+		int sec;
+		cout << " \n if you want the operation press (y) and if not prees (n) \n " << endl;
+		cin >> x;
+		if (x == 'y')
+		{
+			cout << "enter secondes please" << endl;
+			cin >> sec;
+			sec_to_hms(sec);
+		}
+		else
+			cout << " \n thank you \n " << endl;
+	} while (x == 'y');
+			return 0;
+}
